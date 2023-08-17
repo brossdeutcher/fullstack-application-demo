@@ -5,6 +5,8 @@ app.get('/', (req, res) => {
   res.send('<h1>hello, <em>world!</em></h1>');
 });
 
+app.use('/api', require("./api"));
+
 const PORT = 3005;
 app.listen(PORT, (err) => {
   if (!err) {
